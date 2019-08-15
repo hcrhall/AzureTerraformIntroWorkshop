@@ -57,4 +57,6 @@ resource "azurerm_resource_group" "rg" {
     location = "Australia East"
 }
 ```
+Proceed to the next [lesson](./03_Provisioning.md)
+
 ---

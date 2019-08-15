@@ -65,6 +65,8 @@ Once you have verified that the Azure Resource Group resource will be created, t
 
 Terraform will start creating the relevant resource and will log to stdout. You can debug Terraform by changiong the log level. This can be set using the [TF_LOG](https://www.terraform.io/docs/internals/debugging.html) environment variable.
 
+Proceed to the next [lesson](./04_State.md)
+
 ---
   
 

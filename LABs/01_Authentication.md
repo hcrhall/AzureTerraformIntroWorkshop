@@ -46,4 +46,7 @@ set ARM_TENANT_ID=your_tenant_id
 # Not needed for public, required for usgovernment, german, china
 set ARM_ENVIRONMENT=public
 ```
+
+Proceed to the next [lesson](./02_Configuration.md)
+
 ---

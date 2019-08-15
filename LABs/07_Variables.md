@@ -117,4 +117,6 @@ azurerm_resource_group_id = /subscriptions/<subscription_id>/resourceGroups/RG-R
 >
 >You can also query the outputs after apply-time running the `terraform output` command. This command is useful for scripts to extract outputs.
 
+Proceed to the next [lesson](./08_Modules.md)
+
 ---

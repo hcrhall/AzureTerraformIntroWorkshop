@@ -74,6 +74,7 @@ resource "azurerm_resource_group" "rg" {
     }
 }
 ```
+Proceed to the next [lesson](./06_Dependencies.md)
 
 ---
 

@@ -200,4 +200,6 @@ compute_admin_password = <sensitive>
 >
 >Run the `terraform state list` command to list resources within your Terraform state.
 
+Proceed to the next [lesson](./09_Destroy.md)
+
 ---

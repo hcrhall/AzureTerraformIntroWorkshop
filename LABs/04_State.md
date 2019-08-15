@@ -75,5 +75,6 @@ $ terraform state pull
   ]
 }
 ```
+Proceed to the next [lesson](./05_Updating.md)
 
 ---
