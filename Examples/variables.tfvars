@@ -1,0 +1,2 @@
+location = "australiaeast"
+prefix = "tf"
