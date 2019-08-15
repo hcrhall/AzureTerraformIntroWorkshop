@@ -12,8 +12,8 @@ The [Terraform Registry](https://https://registry.terraform.io/) includes a dire
 
 In this example, we're going to use two modules:
 
-- Azure RM Network Module to create a Virtual Network and Network Subnet.
-- Azure RM Compute Module to create a Linux Virtual Machine.
+- **AzureRM Network Module** to create a Virtual Network and Network Subnet.
+- **AzureRM Compute Module** to create a Linux Virtual Machine.
 
 Modify your [variables.tf](../variables.tf) with the following contents:
 ```
@@ -171,11 +171,11 @@ commands will detect it and remind you to do so if necessary.
 >
 >Once the init process has completed, review the directory structure in the working directory. You will notice that a [.terraform](./.terraform) directory has been updated and now contains a new sub-directory called [modules](./terraform/modules).
 
-Run the `terraform apply -var "owner=foo" -auto-approve` command and review the output that is returned by the Terraform CLI: 
+Run `terraform apply -var "owner=foo" -auto-approve` and review the output that is returned by the Terraform CLI: 
 
 >**Tip:**
 >
->The `-auto-approve` option skips interactive approval of plan before applying.
+>The `-auto-approve` option skips interactive approval of the plan before applying.
 
 ```
 terraform apply -var "owner=foo" -auto-approve

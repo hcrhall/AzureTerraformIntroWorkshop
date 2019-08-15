@@ -1,9 +1,9 @@
 # LAB-06: Resource Dependencies
-So far we have been provisioning and changing a the configuration of a single Azure resource, and by now you should be familiar with the Terraform workflow of reviewing the plan, performing an apply and reviewing the state of your configuration.
+So far we have been provisioning and changing the configuration of a single Azure resource, and by now you should be familiar with the Terraform workflow of reviewing the plan, performing an apply and reviewing the state of your configuration.
 
-Unfortunately, the deployment of real-world infrastructure is a little more complex than what we have covered that far and has a diverse set of resources and resource types. It is not uncommon for Terraform configurations to contain multiple resources\resource types, and these resources can even span multiple providers. 
+Unfortunately, the deployment of real-world infrastructure is a little more complex than what we have covered thus far and has a diverse set of resources and resource types. It is not uncommon for Terraform configurations to contain multiple resources\types, and these resources can even span multiple providers. 
 
-In this lesson, we are going to take a look and Terraform dependencies and how we can use [interpolation expressions](https://www.terraform.io/docs/configuration-0-11/interpolation.html) to ensure that dependencies are successfully created before a resource is created. This dependency graph will be the basis of our configuration and will also provide a means of [destroying](https://www.terraform.io/docs/commands/destroy.html) resources in  a safe and predictable manner. Let's jump in!
+In this lesson, we are going to take a look at Terraform dependencies and how we can use [interpolation expressions](https://www.terraform.io/docs/configuration-0-11/interpolation.html) to ensure that dependencies are successfully created before a resource is created. This dependency graph will be the basis of our configuration and will also provide a means of [destroying](https://www.terraform.io/docs/commands/destroy.html) resources in a safe and predictable manner. Let's jump in!
 
 ---
 
@@ -25,9 +25,9 @@ resource "azurerm_virtual_network" "vnet" {
 ```
 >**Note:**
 >
->For those with a keen eye, you would have noticed that in the configuration above we are using an expression to set **resource_group_name** property. his is known as **interpolation**, and it is a powerful feature that allows you to reference variables, attributes of resources (as shown here), call functions, and create conditionals that branch based on a value. For more information, see [interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html).
+>For those with a keen eye, you would have noticed that in the configuration above we are using an expression to set **resource_group_name** property. This is known as **interpolation**, and it is a powerful feature that allows you to reference variables, attributes of resources (as shown here), call functions, and create conditionals that branch based on a given value. For more information, see [interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html).
 >
->This interpolation references an attribute of a resource. The general syntax is TYPE.NAME.ATTRIBUTE. It returns the Azure Resource Group name for the "rg" resource created in the configuration.
+>This interpolation example references an attribute of a resource. The general syntax is TYPE.NAME.ATTRIBUTE. It returns the Azure Resource Group name for the `rg` resource created in the configuration.
 
 ## Apply Changes
 Run `terraform apply` to see how Terraform plans to apply this change.
@@ -111,7 +111,7 @@ azurerm_virtual_network.vnet: Creation complete after 11s [id=/subscriptions/<su
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 ## Implicit and Explicit Dependencies
-By studying the resource attributes used in interpolation expressions, Terraform can automatically infer when one resource depends on another. In the example above, the expression "${azurerm_resource_group.rg.name}" creates an implicit dependency on the azurerm_resource_group named rg.
+By studying the resource attributes used in interpolation expressions, Terraform can automatically infer when one resource depends on another. In the example above, the expression `"${azurerm_resource_group.rg.name}"` creates an implicit dependency on the azurerm_resource_group named `rg`.
 
 Terraform uses this dependency information to determine the correct order in which to create the different resources. In the example above, Terraform knows that the azurerm_resource_group must be created before the azurerm_virtual_network, because the virtual network can't be created without a resource group.
 
@@ -145,6 +145,11 @@ The output of `terraform graph` is in the DOT format, which can easily be conver
 ```
 $ terraform graph | dot -Tsvg > graph.svg
 ```
+
+>**Note**
+>
+>The above command requires that you have a locally installed copy of GraphViz.
+
 The following is an example graph output in SVG format:
 ![graph](../images/graph.svg)
  

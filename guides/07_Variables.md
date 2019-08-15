@@ -1,5 +1,5 @@
 # LAB-07: Terraform Variables
-Congratulations! You now understand the Terraform workflow and you have able to deploy multiple resources in Microsoft Azure and predictable manner. Only problem is everything in your configuration is hard-coded which means you cannot easily reuse the same configuration to deploy to different environments, subscriptions etc. 
+Congratulations! You now understand the Terraform workflow and you are able to deploy multiple resources in Microsoft Azure in a predictable manner. Only problem is everything in your configuration is hard-coded which means you cannot easily reuse the same configuration to deploy to different environments, subscriptions etc. 
 
 To become truly shareable and version-controlled, we need to parameterize our configuration. In Terraform we do this using [input](https://www.terraform.io/docs/configuration/variables.html) and [output](https://www.terraform.io/docs/configuration/outputs.html) variables. This lesson introduces you to Terraform variables and outputs and how you can use them to create repeatable configurations.
 
