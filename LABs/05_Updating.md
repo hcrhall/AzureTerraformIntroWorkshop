@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "rg" {
     }
 }
 ```
-> Tip:
+>**Tip:**
 >
 > Replace the **FirstName** and **LastName** values with your first name and last name so that the resource group tags will reflect that you are the owner of the resource.
 

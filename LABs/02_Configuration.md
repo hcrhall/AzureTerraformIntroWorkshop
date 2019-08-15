@@ -20,7 +20,7 @@ provider "azurerm" {
 }
 ```
 
->Note:
+>**Note:**
 >
 >The version argument is optional, but recommended. It is used to constrain the provider to a specific version or a range of versions in order to prevent downloading a new provider that may possibly contain breaking changes.
 
@@ -36,7 +36,7 @@ resource "azurerm_resource_group" "rg" {
     location = "Australia East"
 }
 ```
-> Tip:
+> **Tip:**
 >
 > Replace the **FirstName** and **LastName** values with your first name and last name so that the resource group name is unique.
 >

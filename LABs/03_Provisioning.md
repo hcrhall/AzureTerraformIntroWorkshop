@@ -25,7 +25,7 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
->Tip: 
+>**Tip:** 
 >
 >Once the init process has completed, review the directory structure in the working directory. You will notice that a [.terraform](./.terraform) directory has been created in the directory that contains the [main.tf](./main.tf). This directory has a sub-directory called [plugins](./terraform/plugins) that contains all Terraform [Providers](https://www.terraform.io/docs/providers/index.html) that were downloaded as part of the initialization process.
 
@@ -57,7 +57,7 @@ Do you want to perform these actions?
 
   Enter a value:
 ```
->Note:
+>**Note:**
 >
 >The CLI output shows the execution plan, describing which actions Terraform will take in order to change real infrastructure to match the configuration. When the output has a `+` next to **azurerm_resource_group.rg**, this indicates that Terraform will create the resource. Beneath that, it shows the properties that will be set. When the value displayed is `<computed>`, it means that the value is unknown.
 

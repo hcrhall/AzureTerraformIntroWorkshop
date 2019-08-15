@@ -23,7 +23,7 @@ resource "azurerm_virtual_network" "vnet" {
     }
 }
 ```
->Note:
+>**Note:**
 >
 >For those with a keen eye, you would have noticed that in the configuration above we are using an expression to set **resource_group_name** property. his is known as **interpolation**, and it is a powerful feature that allows you to reference variables, attributes of resources (as shown here), call functions, and create conditionals that branch based on a value. For more information, see [interpolation syntax](https://www.terraform.io/docs/configuration-0-11/interpolation.html).
 >

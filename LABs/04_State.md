@@ -2,7 +2,7 @@
 
 In the previous LAB we used Terraform to create an Azure Resource Group. As part of the provisioning process Terraform created and wrote configuration data into a [terraform.tfstate](../terraform.state) file. Terraform uses state to track the individual resources it has created and assigns each resource a unique ID. This is how Terraform knows which resources it is managing.
 
->Important:
+>**Important:**
 >
 >As you can imagine, managing a securing the state file is extremely important. It is generally recommended that state is stored remotely and secured using ACLs and encryption. For more information regarding the storage of state refer to the following:
 >
@@ -16,7 +16,7 @@ The terraform state command is used for advanced state management. As your Terra
 
 Run through the following examples to familiarize yourself with the state management workflow in Terraform.
 
->Tip:
+>**Tip:**
 >
 >For a full list of available state based commands please refer to the following:
 >* [State Command](https://www.terraform.io/docs/commands/state/index.html)
