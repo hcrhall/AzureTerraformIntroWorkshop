@@ -146,7 +146,7 @@ The output of `terraform graph` is in the DOT format, which can easily be conver
 $ terraform graph | dot -Tsvg > graph.svg
 ```
 The following is an example graph output in SVG format:
-![graph](../Images/graph.svg)
+![graph](../images/graph.svg)
  
 Proceed to the next [lesson](./07_Variables.md)
 
