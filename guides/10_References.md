@@ -18,6 +18,7 @@ The most important skill you can develop as a technologist is the ability to fin
 - Terraform on Azure documentation - https://docs.microsoft.com/en-us/azure/terraform/
 - A Comprehensive Guide to Terraform - https://blog.gruntwork.io/a-comprehensive-guide-to-terraform-b3d32832baca
 - Terraform Module Registry - https://registry.terraform.io/
+- Terraform Documentation - https://www.terraform.io/docs/configuration/index.html
 
 >**Tip:**
 >

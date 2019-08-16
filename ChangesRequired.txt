@@ -1,0 +1,4 @@
+1. Change to Windows Compute module
+2. Change compute module to use resource group interpolation expression
+3. Change the comment for the owner variables
+4. Public dns entry for compute module

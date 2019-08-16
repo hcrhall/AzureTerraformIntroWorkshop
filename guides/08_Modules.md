@@ -13,18 +13,18 @@ The [Terraform Registry](https://https://registry.terraform.io/) includes a dire
 In this example, we're going to use two modules:
 
 - **AzureRM Network Module** to create a Virtual Network and Network Subnet.
-- **AzureRM Compute Module** to create a Linux Virtual Machine.
+- **AzureRM Compute Module** to create a Windows Virtual Machine.
 
 Modify your [variables.tf](../variables.tf) with the following contents:
 ```
-# Set the AzureRM Regional Data Center Location
+# Set the AzureRM regional data centre Location
 variable "location" {
     type = "string"
     default = "Australia East"
     description = "The name of the Azure region where the resources will be created"
 }
 
-# Set the AzureRM Regional Data Center Location
+# Set the value for the owner of the AzureRM resource 
 variable "owner" {
     type = "string"
     description = "The name of the individual that owns the resources created by this configuration"

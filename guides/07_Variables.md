@@ -20,7 +20,7 @@ variable "location" {
     description = "The name of the Azure region where the resources will be created"
 }
 
-# Set the AzureRM Regional Data Center Location
+# Set the value for the owner of the AzureRM resource
 variable "owner" {
     type = "string"
     description = "The name of the individual that owns the resources created by this configuration"
